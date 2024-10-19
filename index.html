@@ -12,33 +12,64 @@
 </head>
 <body>
 
-  Contact Us
+  <main>
+    <form action="">
+      <h1>Contact Us</h1>
 
-  First Name
-  This field is required
+      <div class="names-wrapper">
+        <div class="first-name-wrapper">
+          <label for="first-name">First Name *</label>
+          <input type="text" name="" id="first-name">
+          <span class="error error-required">This field is required</span>
+        </div>
 
-  Last Name
-  This field is required
+        <div class="last-name-wrapper">
+          <label for="last-name">Last Name *</label>
+          <input type="text" name="" id="last-name">
+          <span class="error error-required">This field is required</span>
+        </div>
+      </div>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+      <div class="email-wrapper">
+        <label for="email">Email Address *</label>
+        <input type="email" name="" id="email">
+        <span class="error error-required">This field is required</span>
+        <span class="error error-valid-email">Please enter a valid email address</span>
+      </div>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+      <div class="query-type-wrapper">
+        <label for="query-type">Query Type</label>
+        <div class="radio-selection-wrapper">
+          <input type="radio" name="" id="general-enquiry">
+          <label for="general-enquiry">General Enquiry</label>
+          <input type="radio" name="" id="support-request">
+          <label for="support-request">Support Request</label>
+        </div>
+        <span class="error error-query">Please select a query type</span>
+      </div>
 
-  Message
-  This field is required
+      <div class="message-wrapper">
+        <label for="message">Message *</label>
+        <textarea name="" id="message"></textarea>
+        <span class="error error-required">This field is required</span>
+      </div>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
 
-  Submit
+      <div class="consent-wrapper">
+        <div>
+          <input type="checkbox" name="" id="consent">
+          <label for="consent">I consent to being contacted by the team</label>
+        </div>
+        <span class="error error-consent">To submit this form, please consent to being contacted</span>
+      </div>
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
+      <button type="submit" class="button">Submit</button>
+
+    </form>
+  </main>
+
+  <!-- Message Sent!
+  Thanks for completing the form. We'll be in touch soon! -->
   
 <script src="app.js"></script>
 </body>
