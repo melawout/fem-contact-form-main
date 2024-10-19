@@ -17,48 +17,51 @@
       <h1>Contact Us</h1>
 
       <div class="names-wrapper">
-        <div class="first-name-wrapper">
-          <label for="first-name">First Name *</label>
+        <div class="wrapper first-name-wrapper mg-b-2">
+          <label class="mg-b-1" for="first-name">First Name *</label>
           <input type="text" name="" id="first-name">
           <span class="error error-required">This field is required</span>
         </div>
 
-        <div class="last-name-wrapper">
-          <label for="last-name">Last Name *</label>
+        <div class="wrapper last-name-wrapper">
+          <label class="mg-b-1" for="last-name">Last Name *</label>
           <input type="text" name="" id="last-name">
           <span class="error error-required">This field is required</span>
         </div>
       </div>
 
-      <div class="email-wrapper">
-        <label for="email">Email Address *</label>
+      <div class="wrapper email-wrapper">
+        <label class="mg-b-1" for="email" class="mg-b-2">Email Address *</label>
         <input type="email" name="" id="email">
         <span class="error error-required">This field is required</span>
         <span class="error error-valid-email">Please enter a valid email address</span>
       </div>
 
-      <div class="query-type-wrapper">
-        <label for="query-type">Query Type</label>
-        <div class="radio-selection-wrapper">
-          <input type="radio" name="" id="general-enquiry">
-          <label for="general-enquiry">General Enquiry</label>
-          <input type="radio" name="" id="support-request">
-          <label for="support-request">Support Request</label>
+      <div class="wrapper query-type-wrapper">
+        <label class="mg-b-1" for="query-type">Query Type</label>
+        <div class="wrapper radio-selection-wrapper">
+          <label for="general-enquiry" class="radio-wrapper">
+            <input type="radio" name="query-type" id="general-enquiry">
+            General Enquiry
+          </label>
+          <label for="support-request" class="radio-wrapper">
+            <input type="radio" name="query-type" id="support-request">
+            Support Request
+          </label>
         </div>
         <span class="error error-query">Please select a query type</span>
       </div>
 
-      <div class="message-wrapper">
-        <label for="message">Message *</label>
+      <div class="wrapper message-wrapper">
+        <label class="mg-b-1" for="message">Message *</label>
         <textarea name="" id="message"></textarea>
         <span class="error error-required">This field is required</span>
       </div>
 
-
-      <div class="consent-wrapper">
-        <div>
+      <div class="wrappper">
+        <div class="consent-wrapper">
           <input type="checkbox" name="" id="consent">
-          <label for="consent">I consent to being contacted by the team</label>
+          <label for="consent">I consent to being contacted by the team *</label>
         </div>
         <span class="error error-consent">To submit this form, please consent to being contacted</span>
       </div>
