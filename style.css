@@ -56,6 +56,7 @@ img{
 
 input, button, textarea, select {
   font: inherit;
+  outline: none;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -87,18 +88,18 @@ body{
   color: var(--clr-grey-900);
 }
 
+h1{
+  font-weight: var(--fw-700);
+}
+
 form{
   display: grid;
   gap: var(--content-spacing);
-
+  
   padding: var(--content-spacing);
   border-radius: 1rem;
-
+  
   background: var(--clr-white);
-}
-
-h1{
-  font-weight: var(--fw-700);
 }
 
 .wrapper, .radio-selection-wrapper{
@@ -109,24 +110,47 @@ h1{
   display: flex;
   gap: 1rem;
   align-items: baseline;
-  /* line-height: 1.25; */
-
 }
 
 input, textarea, .radio-wrapper {
   border: 1px solid var(--clr-grey-500);
-  padding: 0.5rem;
+  padding: 0.825rem;
   margin-block-end: .5rem;
 
   border-radius: .5rem;
+}
+
+input:hover, textarea:hover, .radio-wrapper:hover{
+  border-color: var(--clr-green-600);
+}
+
+input:focus-visible{
+  border-color: var(--clr-green-600);
+}
+
+.radio-wrapper:has(> input[type="radio"]:checked){
+  background: var(--clr-green-200); 
+  border-color: var(--clr-green-600);
 }
 
 .radio-selection-wrapper{
   gap: .5rem;
 }
 
-input[type="radio"]{
+.radio-wrapper{
+  padding-inline-start: 2rem;
+}
 
+input[type="radio"]{
+  margin-inline-end: .5rem;
+  accent-color: var(--clr-green-600);
+}
+
+input[type="checkbox"]{
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--clr-green-600);
 }
 
 .button{
@@ -137,17 +161,76 @@ input[type="radio"]{
   color: var(--clr-white);
 
   padding-block: 1rem;
+  cursor: pointer;
+}
+
+.button:hover{
+  filter: brightness(.6);
 }
 
 
 /* error handling CSS */
 
-.error{
+.error-first-name,
+.error-last-name,
+.error-email,
+.error-valid-email,
+.error-query,
+.error-message,
+.error-consent{
   display: none;
   color: var(--clr-red);
 }
 
-
 *{
   /* border: 1px solid red; */
+}
+
+@media(min-width: 58rem){
+  form{
+    width: 56rem;
+    padding: 3rem;
+  }
+
+  .names-wrapper, .radio-selection-wrapper{
+    display: flex;
+    gap: var(--content-spacing);
+  }
+
+  .names-wrapper .wrapper{
+    flex: 1;
+    height: 100%;
+  }
+
+  .radio-selection-wrapper label{
+    flex: 1;
+  }
+}
+
+#success-block{
+  display: none;
+
+  background-color: var(--clr-green-600);
+  filter: brightness(.6);
+  color: var(--clr-white);
+
+  width: fit-content;
+  padding: var(--content-padding);
+  border-radius: .5rem;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin:auto;
+}
+
+.success-title-block{
+  display: flex;
+  gap: .5rem;
+
+  padding-block-end: .5rem;
+}
+
+.success-title{
+  font-weight: var(--fw-700);
 }
