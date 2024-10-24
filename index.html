@@ -13,41 +13,44 @@
 <body>
 
   <main>
-    <form action="">
+    <form action="" id="form">
       <h1>Contact Us</h1>
 
       <div class="names-wrapper">
         <div class="wrapper first-name-wrapper mg-b-2">
           <label class="mg-b-1" for="first-name">First Name *</label>
           <input type="text" name="" id="first-name">
-          <span class="error error-required">This field is required</span>
+          <span class="error error-first-name">This field is required</span>
         </div>
 
         <div class="wrapper last-name-wrapper">
           <label class="mg-b-1" for="last-name">Last Name *</label>
           <input type="text" name="" id="last-name">
-          <span class="error error-required">This field is required</span>
+          <span class="error error-last-name">This field is required</span>
         </div>
       </div>
 
       <div class="wrapper email-wrapper">
         <label class="mg-b-1" for="email" class="mg-b-2">Email Address *</label>
         <input type="email" name="" id="email">
-        <span class="error error-required">This field is required</span>
+        <span class="error error-email">This field is required</span>
         <span class="error error-valid-email">Please enter a valid email address</span>
       </div>
 
       <div class="wrapper query-type-wrapper">
         <label class="mg-b-1" for="query-type">Query Type</label>
         <div class="wrapper radio-selection-wrapper">
+          
           <label for="general-enquiry" class="radio-wrapper">
-            <input type="radio" name="query-type" id="general-enquiry">
+            <input type="radio" name="query-type" id="general-enquiry" value="general enquiry">
             General Enquiry
           </label>
+
           <label for="support-request" class="radio-wrapper">
-            <input type="radio" name="query-type" id="support-request">
+            <input type="radio" name="query-type" id="support-request" value="support request">
             Support Request
           </label>
+
         </div>
         <span class="error error-query">Please select a query type</span>
       </div>
@@ -55,7 +58,7 @@
       <div class="wrapper message-wrapper">
         <label class="mg-b-1" for="message">Message *</label>
         <textarea name="" id="message"></textarea>
-        <span class="error error-required">This field is required</span>
+        <span class="error error-message">This field is required</span>
       </div>
 
       <div class="wrappper">
@@ -71,9 +74,14 @@
     </form>
   </main>
 
-  <!-- Message Sent!
-  Thanks for completing the form. We'll be in touch soon! -->
-  
+  <div id="success-block">
+    <div class="success-title-block">
+      <img src="assets/images/icon-success-check.svg" alt="success icon">
+      <p class="success-title">Message Sent!</p>
+    </div>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+
 <script src="app.js"></script>
 </body>
 </html>
